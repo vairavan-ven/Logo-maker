@@ -2,13 +2,16 @@
   "name": "logo-maker",
   "version": "1.0.0",
   "description": "logo maker",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
+  "type": "module", 
+  "imports": { 
+    "libs/": "./libs/"
   },
   "scripts": {
-    "test": "node shapes.test.js"
+    "test": "node --experimental-modules shapes.test.mjs"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^9.2.11"
+  }
 }
