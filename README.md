@@ -23,4 +23,7 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 ## Sample logo
 
+<img width="675" alt="Screenshot 2023-11-02 at 12 32 12 pm" src="https://github.com/vairavan-ven/Logo-maker/assets/138781674/6f2aa8e4-b3ab-4da8-ab15-7af4febd63a3">
+
 ## Walkthrough Video
+https://drive.google.com/file/d/1W_CSGydGVaaswZ8gM9sEZsXmyHxIAxuI/view
