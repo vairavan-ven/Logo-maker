@@ -2,10 +2,15 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const shapes = require('./lib/shapes');
 
-function generateSVG(shape, color) {
+function generateSVG(shape, color, text, textColor) {
     shape.setColor(color);
+
+    let textContent = '';
+    if (text) {
+        textContent = `<text x="100" y="50" fill="${textColor}">${text}</text>`;
+    }
   
-    const svgContent = `<svg width="300" height="200">${shape.render()}</svg>`;
+    const svgContent = `<svg width="300" height="200">${shape.render()}${textContent}</svg>`;
   
     fs.writeFileSync('logo.svg', svgContent);
     console.log('Generated logo.svg');
@@ -52,7 +57,7 @@ function promptUser() {
                     break;
             }
 
-            generateSVG(selectedShape, answers.shapeColor);
+            generateSVG(selectedShape, answers.shapeColor, answers.text, answers.textColor);
         })
         .catch((error) => {
             console.log('Error occurred:', error);
