@@ -2,7 +2,7 @@
   "name": "logo-maker",
   "version": "1.0.0",
   "description": "logo maker",
-  "type": "module", 
+  
   "imports": { 
     "libs/": "./libs/"
   },
@@ -12,6 +12,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^9.2.11"
+    "inquirer": "^8.2.4"
   }
 }
