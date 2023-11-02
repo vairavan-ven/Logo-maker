@@ -7,7 +7,7 @@ function generateSVG(shape, color, text, textColor) {
 
     let textContent = '';
     if (text) {
-        textContent = `<text x="100" y="50" fill="${textColor}">${text}</text>`;
+        textContent = `<text x="150" y="100" text-anchor="middle" alignment-baseline="middle" fill="${textColor}">${text}</text>`;
     }
   
     const svgContent = `<svg width="300" height="200">${shape.render()}${textContent}</svg>`;
@@ -23,6 +23,9 @@ function promptUser() {
                 type: 'input',
                 name: 'text',
                 message: 'Enter up to three characters:',
+                validate: function (value) {
+                    return value.length <= 3 || 'Please enter up to three characters.';
+                },
             },
             {
                 type: 'input',
