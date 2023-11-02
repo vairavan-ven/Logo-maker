@@ -7,7 +7,7 @@ function generateSVG(shape, color, text, textColor) {
 
     let textContent = '';
     if (text) {
-        textContent = `<text x="150" y="100" text-anchor="middle" alignment-baseline="middle" fill="${textColor}">${text}</text>`;
+        textContent = `<text x="150" y="100" text-anchor="middle" alignment-baseline="middle" fill="${textColor}" font-size="40">${text}</text>`;
     }
   
     const svgContent = `<svg width="300" height="200">${shape.render()}${textContent}</svg>`;
